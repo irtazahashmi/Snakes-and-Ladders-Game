@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Linking the JavaScript file to HTML -->
+    <script src="/javascripts/splash.js"></script>
+
+    <!-- Linking the CSS file to HTML -->
+    <link rel="stylesheet" href="stylesheets/splash.css" />
+
+    <!-- This will be displayed in the tab -->
+    <title>Welcome!</title>
+
+    <!--Adding background music-->
+    <embed name="myMusic" loop="true" hidden="true" src="/music/music.mp3"></embed>
+
+  </head>
+
+  <body>
+    <div id="warning">
+      This game works best on larger screens.
+    </div>
+    <h1>Welcome to</h1>
+    <h3>
+      This game is made by 
+    </h3>
+
+    <main>
+      <!-- Statistics div. -->
+      <div>
+        <div id="stats">
+          <h2>Statistics :</h2>
+          <div class="stat" id="numGames">
+            <!-- Outputs the value into the template in HTML escaped form. -->
+            <div>Number of games:</div>
+            <div><%= totalGames %></div>
+          </div>
+
+          <div class="stat" id="numOfPlayers">
+            <div>Number of Players:</div>
+            <div><%= totalPlayers %></div>
+          </div>
+
+          <div class="stat" id="avgGameDuration">
+            <div>Average Game Time:</div>
+            <div><%= avgGameTime %></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <img id="title" src="/images/title.png" />
+
+      <!-- Logo -->
+      <img id="logo" src="/images/logo.png" />
+
+      <!-- Play image -->
+      <img id="playButtonImage" src="/images/play.png" />
+
+      <!-- Play button hyperlink using an anchor tag -->
+      <h1 id="playButton"><a href="/game">Play</a></h1>
+
+
+      <!-- how to play image -->
+      <img id="howToPlayImage" src="/images/howToPlay.png" />
+
+      <!-- How to play button hyperlink using an anchor tag -->
+      <h1 id="howToPlayButton"><a href="/howToPlay">howToPlay</a></h1>
+    </main>
+  </body>
+</html>

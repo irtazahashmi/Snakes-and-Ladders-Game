@@ -1,0 +1,7 @@
+/* Universal selector. Resetting everything so it works for every browser */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}

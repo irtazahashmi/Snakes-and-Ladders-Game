@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Linking the CSS files to HTML -->
+    <link rel="stylesheet" href="/stylesheets/global.css" />
+    <link rel="stylesheet" href="/stylesheets/game.css" />
+    
+    <!--This will be displayed in the tab-->
+    <title>Let's Play!</title>
+
+     <!--Adding background music-->
+     <embed name="myMusic" loop="true" hidden="true" src="/music/music.mp3"></embed>
+  </head>
+  
+  
+
+
+  <body>
+
+     <!--The title on the website-->
+     <img id="title" src="/images/title.png" />
+
+    <!--Popup asking for player's name and assigning it to a player ID. Using and input tag to implement
+    that.-->
+    <div id="modal">
+      <div id="modal-content">
+        <form action="#" id="playerNameForm">
+          <h1>You're almost there!</h1>
+          <label for="playerName">Please enter your name to start the game:</label>
+          <input type="text" name="playersName" id="playersName" />
+          <input type="submit" value="Let's start!" />
+        </form>
+      </div>
+    </div>
+
+    
+    <main>
+      <div id="boardContainer">
+        <span class="pin" id="pinPlayerA"></span>
+        <span class="pin" id="pinPlayerB"></span>
+        <div id="board">
+
+          <div class="imgOnBoard" id="ladder1" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder2" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder3" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder4" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder5" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder6" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder7" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder8" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder9" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder10" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+          <div class="imgOnBoard" id="ladder11" class="ladder">
+            <img src="/images/ladder.png" alt="ladder" />
+          </div>
+
+
+         <div class="imgOnBoard" id="snake1" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake2" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake3" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake4" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake5" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake6" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake7" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake8" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake9" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+          <div class="imgOnBoard" id="snake10" class="snake">
+            <img src="/images/snake.png" alt="snake" />
+          </div> 
+
+
+          <div class="cell row cell91" id="yellow">91</div>
+          <div class="cell row cell92" >92</div>
+          <div class="cell row cell93" id="yellow">93</div>
+          <div class="cell row cell94" >94</div>
+          <div class="cell row cell95" id="yellow">95</div>
+          <div class="cell row cell96">96</div>
+          <div class="cell row cell97" id="yellow">97</div>
+          <div class="cell row cell98">98</div>
+          <div class="cell row cell99" id="yellow">99</div>
+          <div class="cell row cell100">100</div>
+
+          <div class="cell row cell90">90</div>
+          <div class="cell row cell89" id="yellow">89</div>
+          <div class="cell row cell88">88</div>
+          <div class="cell row cell87" id="yellow" >87</div>
+          <div class="cell row cell86">86</div>
+          <div class="cell row cell85" id="yellow">85</div>
+          <div class="cell row cell84">84</div>
+          <div class="cell row cell83" id="yellow">83</div>
+          <div class="cell row cell82">82</div>
+          <div class="cell row cell81" id="yellow">81</div>
+
+          <div class="cell row cell71" id="yellow">71</div>
+          <div class="cell row cell72">72</div>
+          <div class="cell row cell73" id="yellow">73</div>
+          <div class="cell row cell74">74</div>
+          <div class="cell row cell75" id="yellow">75</div>
+          <div class="cell row cell76">76</div>
+          <div class="cell row cell77" id="yellow">77</div>
+          <div class="cell row cell78">78</div>
+          <div class="cell row cell79"id="yellow" >79</div>
+          <div class="cell row cell80">80</div>
+
+          <div class="cell row cell70">70</div>
+          <div class="cell row cell69" id="yellow">69</div>
+          <div class="cell row cell68">68</div>
+          <div class="cell row cell67" id="yellow">67</div>
+          <div class="cell row cell66">66</div>
+          <div class="cell row cell65" id="yellow">65</div>
+          <div class="cell row cell64">64</div>
+          <div class="cell row cell63" id="yellow">63</div>
+          <div class="cell row cell62">62</div>
+          <div class="cell row cell61" id="yellow">61</div>
+
+          <div class="cell row cell51" id="yellow">51</div>
+          <div class="cell row cell52">52</div>
+          <div class="cell row cell53"id="yellow">53</div>
+          <div class="cell row cell54">54</div>
+          <div class="cell row cell55"id="yellow">55</div>
+          <div class="cell row cell56">56</div>
+          <div class="cell row cell57"id="yellow">57</div>
+          <div class="cell row cell58">58</div>
+          <div class="cell row cell59"id="yellow">59</div>
+          <div class="cell row cell60">60</div>
+
+          <div class="cell row cell50">50</div>
+          <div class="cell row cell49"id="yellow" >49</div>
+          <div class="cell row cell48">48</div>
+          <div class="cell row cell47" id="yellow">47</div>
+          <div class="cell row cell46">46</div>
+          <div class="cell row cell45" id="yellow">45</div>
+          <div class="cell row cell44">44</div>
+          <div class="cell row cell43" id="yellow">43</div>
+          <div class="cell row cell42">42</div>
+          <div class="cell row cell41" id="yellow">41</div>
+
+          <div class="cell row cell31" id="yellow">31</div>
+          <div class="cell row cell32">32</div>
+          <div class="cell row cell33" id="yellow">33</div>
+          <div class="cell row cell34">34</div>
+          <div class="cell row cell35" id="yellow">35</div>
+          <div class="cell row cell36">36</div>
+          <div class="cell row cell37" id="yellow">37</div>
+          <div class="cell row cell38">38</div>
+          <div class="cell row cell39" id="yellow">39</div>
+          <div class="cell row cell40">40</div>
+
+          <div class="cell row cell30">30</div>
+          <div class="cell row cell29" id="yellow">29</div>
+          <div class="cell row cell28">28</div>
+          <div class="cell row cell27" id="yellow">27</div>
+          <div class="cell row cell26">26</div>
+          <div class="cell row cell25" id="yellow">25</div>
+          <div class="cell row cell24">24</div>
+          <div class="cell row cell23" id="yellow">23</div>
+          <div class="cell row cell22">22</div>
+          <div class="cell row cell21" id="yellow">21</div>
+
+          <div class="cell row cell11" id="yellow" >11</div>
+          <div class="cell row cell12">12</div>
+          <div class="cell row cell13" id="yellow">13</div>
+          <div class="cell row cell14">14</div>
+          <div class="cell row cell15" id="yellow" > 15</div>
+          <div class="cell row cell16">16</div>
+          <div class="cell row cell17" id="yellow" >17</div>
+          <div class="cell row cell18">18</div>
+          <div class="cell row cell19" id="yellow">19</div>
+          <div class="cell row cell20">20</div>
+
+          <div class="cell row cell10">10</div>
+          <div class="cell row cell9" id="yellow" >9</div>
+          <div class="cell row cell8">8</div>
+          <div class="cell row cell7" id="yellow">7</div>
+          <div class="cell row cell6">6</div>
+          <div class="cell row cell5" id="yellow">5</div>
+          <div class="cell row cell4" >4</div>
+          <div class="cell row cell3" id="yellow">3</div>
+          <div class="cell row cell2">2</div>
+          <div class="cell row cell1" id="yellow">1</div>
+        </div>
+      </div>
+
+       
+         <!--Home page image-->
+         <img id="homePageImage" src="/images/homePage.png" />
+         <!--Home page button-->
+        <div><button id="returnToHomeButton">Return to home page</button></div>
+          
+          
+          <!--Timer-->
+          <div id="timer">
+              <div>
+                <div id="gameTime">
+                  <h1 id="gameTimeText">Time since start:</h1>
+                  <div>
+                    <label id="minutes">00</label>:<label id="seconds">00</label>
+                  </div>
+                </div>
+
+
+        </div>
+        <div id="playersBoard">
+          <div>
+            <span id="playerA">Waiting...</span> VS
+            <span id="playerB">Waiting...</span>
+          </div>
+        </div>
+
+        <div id="announcementsContainer">
+          <div id="announcementsContent">
+            Waiting for more players to join the game...
+          </div>
+        </div>
+
+        <!--Dice-->
+        <div>
+          <div id="diceImg">
+            <!--Dice Image-->
+            <img id='diceImage' src="/images/dice.png" alt="dice" />
+            <!--Dice button-->
+            <button id="rollDiceBtn" disabled>Throw dice</button>
+
+            <h2 id="rollHere"><i>Roll!</i></h2>
+
+          </div>
+          <div id="turnContainer">
+            <div>It's <span id="whosTurn">-</span>'s turn now...</div>
+          </div>
+        </div>
+
+         <!--Full screen Title-->
+         <h1  id="fullScreenTitle">Fullscreen</h1>
+        <!--Fullscren button-->
+
+         <button id="fullScreenButton">Fullscreen</button>
+
+         <h2 id="status">Game Status:</h2>
+         <h2 id="turn">Whose Turn?</h2>
+
+
+
+      </div>
+    </main>
+    
+     <!-- Linking the JavaScript files to HTML -->
+     <script src="/javascripts/messageTypes.js"></script>
+     <script src="/javascripts/game.js"></script>
+     <script src="/javascripts/gameSocketInteraction.js"></script>
+
+</html>

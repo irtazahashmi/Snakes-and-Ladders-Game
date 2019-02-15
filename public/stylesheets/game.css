@@ -1,0 +1,507 @@
+/* Media query */
+@media screen and (max-width: 1080px) {
+}
+
+body {
+  background-color: black;
+}
+
+#modal {
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* The pop up box that asks for the name once game screen is opened */
+#modal-content {
+  background-color: rgb(56, 56, 56);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  color: white;
+}
+
+/*The whole board*/
+#boardContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform: scale(0.8, 0.8);
+  top: 60px;
+  left: 170px;
+}
+
+/* This is for the board cells making it all 75 pix wide */
+#board {
+  display: grid;
+  grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+}
+
+/*Black squares*/
+#black {
+  background-color: black;
+}
+
+/*Yellow squares*/
+#yellow {
+  background-color: #daa520;
+}
+
+/*title logo*/
+#title {
+  position: absolute;
+  left: 450px;
+  width: 500px;
+  height: 150px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+/*Cells and numbers*/
+.cell {
+  width: 75px;
+  height: 75px;
+  border: 1px solid black;
+  line-height: 35px;
+  text-align: left;
+  position: relative;
+  font-size: 35px;
+  color: white;
+  top: 20px;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+/*Player pin*/
+.pin {
+  z-index: 2;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 1s linear;
+  border: 4px solid #f0f0f0;
+}
+
+#pinPlayerA {
+  top: 715px;
+  left: 695px;
+  background-color: orange;
+}
+
+#pinPlayerB {
+  top: 715px;
+  left: 695px;
+  background-color: blue;
+}
+
+.imgOnBoard {
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+}
+
+.imgOnBoard > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* from the game screen, there are two big halves and this css 
+  command forces the elements in the halves to be in the center of 
+  the two big halves */
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+#infoSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Timer*/
+#gameTime {
+  color: rgba(0, 0, 0, 0.91);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 300px;
+  position: absolute;
+  bottom: 100px;
+  height: 50%;
+  left: 10px;
+  border: 2px solid white;
+}
+
+/*Timer in seconds text*/
+#gameTime > div {
+  font-size: 60px;
+  color: yellow;
+}
+
+/*Time since starts*/
+#gameTimeText {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  color: white;
+}
+
+/*Player vs Player board*/
+#playersBoard {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  top: 170px;
+  left: 1028px;
+  border: 3px solid white;
+  color: yellow;
+  font-size: 25px;
+  font-style: cursive;
+  width: 350px;
+  font-weight: bolder;
+}
+
+/*What did player get and where did he move...*/
+#announcementsContainer {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: yellow;
+  font-size: 25px;
+  top: 300px;
+  border: 2px solid white;
+  font-style: cursive;
+  font-style: italic;
+  left: 1028px;
+  width: 350px;
+}
+
+/* Who's turn is it? */
+#turnContainer {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: yellow;
+  font-size: 25px;
+  top: 470px;
+  border: 2px solid white;
+  font-style: cursive;
+  font-style: italic;
+  left: 1028px;
+  width: 350px;
+}
+
+#diceImg {
+  width: 128px;
+  margin: auto;
+  transition: all 1s ease;
+}
+
+/*dice image*/
+#diceImage {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  position: absolute;
+  left: 1050px;
+  top: 620px;
+}
+
+/*dice button*/
+#rollDiceBtn {
+  position: absolute;
+  left: 1050px;
+  top: 620px;
+  height: 100px;
+  width: 100px;
+  opacity: 0;
+}
+
+.diceImg-active {
+  transform: rotate(1800deg);
+}
+
+/*Roll here text*/
+#rollHere {
+  position: absolute;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 25px;
+  color: white;
+  font-weight: bolder;
+  left: 1072px;
+  top: 730px;
+  font-family: Arial;
+}
+
+#fullScreenButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#returnToHome {
+  display: none;
+}
+
+/*fullScreen title*/
+#fullScreenTitle {
+  position: absolute;
+  color: yellow;
+  font-size: 30px;
+  bottom: 80px;
+  left: 80px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/*fullScreen button*/
+#fullScreenButton {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  width: 180px;
+  height: 35px;
+  opacity: 0;
+}
+
+/*Home page button*/
+#returnToHomeButton {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+/*Home page image*/
+#homePageImage {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/*All the ladders images*/
+/*2-38*/
+#ladder1 {
+  top: 510px;
+  left: 570px;
+  height: 270px;
+  width: 70px;
+  transform: rotate(-17deg);
+}
+
+/*7-14*/
+#ladder2 {
+  top: 680px;
+  left: 240px;
+  height: 90px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+/*8-31*/
+#ladder3 {
+  top: 500px;
+  left: 70px;
+  height: 300px;
+  width: 60px;
+  transform: rotate(-30deg);
+}
+
+/*15-26*/
+#ladder4 {
+  top: 600px;
+  left: 320px;
+  height: 90px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+/*21-42*/
+#ladder5 {
+  top: 440px;
+  left: 650px;
+  height: 180px;
+  width: 50px;
+  transform: rotate(-19deg);
+}
+
+/*28-84*/
+#ladder6 {
+  top: 120px;
+  left: 240px;
+  height: 500px;
+  width: 50px;
+  transform: rotate(19deg);
+}
+
+/*36-44*/
+#ladder7 {
+  top: 440px;
+  left: 410px;
+  height: 90px;
+  width: 50px;
+  transform: rotate(45deg);
+}
+
+/*51-67*/
+#ladder8 {
+  top: 220px;
+  left: 120px;
+  height: 220px;
+  width: 50px;
+  transform: rotate(70deg);
+}
+
+/*71-91*/
+#ladder9 {
+  top: 50px;
+  left: 10px;
+  height: 180px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+/*78-98*/
+#ladder10 {
+  top: 50px;
+  left: 540px;
+  height: 180px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+/*87-94*/
+#ladder11 {
+  top: 60px;
+  left: 240px;
+  height: 90px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+/*Snake Images*/
+/*16-6*/
+#snake1 {
+  top: 670px;
+  left: 300px;
+  height: 90px;
+  width: 150px;
+  transform: rotate(130deg);
+}
+
+/*46-25*/
+#snake2 {
+  top: 490px;
+  left: 280px;
+  height: 90px;
+  width: 200px;
+  transform: rotate(60deg);
+}
+
+/*49-11*/
+#snake3 {
+  top: 510px;
+  left: -60px;
+  height: 90px;
+  width: 270px;
+  transform: rotate(110deg);
+}
+
+/*62-19*/
+#snake4 {
+  top: 440px;
+  left: 420px;
+  height: 90px;
+  width: 420px;
+  transform: rotate(90deg);
+}
+
+/*64-60*/
+#snake5 {
+  top: 300px;
+  left: 450px;
+  height: 90px;
+  width: 280px;
+  transform: rotate(20deg);
+}
+
+/*74-53*/
+#snake6 {
+  top: 240px;
+  left: 130px;
+  height: 90px;
+  width: 200px;
+  transform: rotate(115deg);
+}
+
+/*89-68*/
+#snake7 {
+  top: 180px;
+  left: 45px;
+  height: 90px;
+  width: 200px;
+  transform: rotate(60deg);
+}
+
+/*92-88*/
+#snake8 {
+  top: 60px;
+  left: 90px;
+  height: 90px;
+  width: 100px;
+  transform: rotate(50deg);
+}
+
+/*95-75*/
+#snake9 {
+  top: 100px;
+  left: 240px;
+  height: 90px;
+  width: 190px;
+  transform: rotate(90deg);
+}
+
+/*99-80*/
+#snake10 {
+  top: 100px;
+  left: 580px;
+  height: 90px;
+  width: 200px;
+  transform: rotate(60deg);
+}
+
+#status {
+  position: absolute;
+  font-family: cursive;
+  font-size: 30px;
+  color: white;
+  top: 250px;
+}
+
+#turn {
+  position: absolute;
+  font-family: cursive;
+  font-size: 30px;
+  color: white;
+  top: 427px;
+}
