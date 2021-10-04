@@ -1,1 +1,3 @@
-Download the folder. Open the folder through the terminal and type "npm start". Run the application on localhost:3000.
+1) Pull the repository.
+2) cd to the repository using the terminal and run "npm start". 
+3) The application will run on localhost:3000.
